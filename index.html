@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FW Ecom Global LLC — Direct-to-Consumer E-Commerce Brands</title>
+<meta name="description" content="FW Ecom Global LLC is a U.S. digital commerce company that builds and operates a focused portfolio of direct-to-consumer e-commerce brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563EB'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3EFW%3C/text%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#2563EB;--primary-dark:#1D4ED8;--primary-light:#3B82F6;--accent:#06B6D4;
+  --bg:#ffffff;--bg-alt:#f6f9fc;--bg-dark:#0a2540;
+  --text:#425466;--text-dark:#0a2540;--text-light:#8898aa;--border:#e3e8ee;--success:#24b47e;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:0 8px 40px rgba(0,0,0,.08);--shadow-xl:0 16px 64px rgba(0,0,0,.1);
+  --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:24px;--t:.3s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{color:var(--primary);text-decoration:none;transition:color var(--t)}
+a:hover{color:var(--primary-dark)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{color:var(--text-dark);line-height:1.2;font-weight:700}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:var(--r-sm);font:600 15px var(--font);cursor:pointer;transition:all var(--t);border:none}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 2px 8px rgba(37,99,235,.3)}
+.btn-primary:hover{background:var(--primary-dark);color:#fff;box-shadow:0 4px 16px rgba(37,99,235,.4);transform:translateY(-1px)}
+.btn-secondary{background:#fff;color:var(--text-dark);border:1.5px solid var(--border)}
+.btn-secondary:hover{background:var(--bg-alt);border-color:var(--text-light);color:var(--text-dark)}
+
+/* nav */
+.navbar{position:fixed;inset:0 0 auto 0;z-index:1000;padding:16px 0;background:rgba(255,255,255,.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:all var(--t)}
+.navbar.scrolled{padding:12px 0;box-shadow:var(--shadow-sm);border-bottom:1px solid var(--border)}
+.nav-container{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:8px;font-size:19px;font-weight:700;color:var(--text-dark)}
+.logo:hover{color:var(--text-dark)}
+.logo-mark{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:3px 8px;border-radius:6px;font-size:15px;font-weight:800;letter-spacing:1px}
+.nav-links{display:flex;align-items:center;list-style:none;gap:30px}
+.nav-links a{color:var(--text);font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--text-dark)}
+.nav-links a.nav-cta{background:var(--primary);color:#fff;padding:8px 20px;border-radius:var(--r-sm)}
+.nav-links a.nav-cta:hover{background:var(--primary-dark);color:#fff}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.mobile-toggle span{width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:all var(--t)}
+
+/* hero */
+.hero{position:relative;padding:170px 0 110px;background:linear-gradient(180deg,#f6f9fc 0%,#fff 100%);overflow:hidden;text-align:center}
+.hero::before{content:"";position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:1100px;height:700px;background:radial-gradient(ellipse at center,rgba(37,99,235,.12) 0%,rgba(6,182,212,.06) 40%,transparent 70%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(10,37,64,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(10,37,64,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at center top,#000 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center top,#000 0%,transparent 70%);pointer-events:none}
+.hero .container{position:relative}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);color:var(--primary-dark);font-size:13px;font-weight:600;margin-bottom:28px}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 0 4px rgba(36,180,126,.15)}
+.hero h1{font-size:clamp(36px,5.4vw,60px);font-weight:800;letter-spacing:-1.5px;max-width:920px;margin:0 auto 24px}
+.gradient-text{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nw{white-space:nowrap}
+.hero p.lead{font-size:clamp(17px,2vw,20px);max-width:720px;margin:0 auto 40px;color:var(--text)}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:64px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+.pillar{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-md);text-align:left;display:flex;gap:14px;align-items:flex-start}
+.pillar strong{display:block;color:var(--text-dark);font-size:15px;margin-bottom:2px}
+.pillar span{font-size:14px;color:var(--text)}
+
+/* icons */
+.icon{flex:none;width:44px;height:44px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;background:rgba(37,99,235,.08);color:var(--primary)}
+.icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* sections */
+section{padding:110px 0}
+.section-alt{background:var(--bg-alt)}
+.section-header{text-align:center;max-width:720px;margin:0 auto 64px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary);margin-bottom:14px}
+.section-header h2,.about-text h2{font-size:clamp(30px,3.6vw,42px);letter-spacing:-.8px;margin-bottom:18px}
+.section-header p{font-size:18px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.about-text p{font-size:17px;margin-bottom:18px}
+.about-text strong{color:var(--text-dark)}
+.about-cards{display:flex;flex-direction:column;gap:18px}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;transition:all var(--t)}
+.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:rgba(37,99,235,.25)}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{font-size:15px}
+.about-cards .card{display:flex;gap:18px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.step{position:relative;overflow:hidden}
+.step-num{font-size:44px;font-weight:800;line-height:1;margin-bottom:18px;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
+.step::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));transition:width .5s ease}
+.step:hover::after{width:100%}
+
+/* categories */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cat-grid .card .icon{margin-bottom:18px}
+
+/* dark standards */
+.dark{background:var(--bg-dark);color:rgba(255,255,255,.72);position:relative;overflow:hidden}
+.dark::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,.35),transparent 65%);pointer-events:none}
+.dark::after{content:"";position:absolute;left:-200px;bottom:-250px;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.18),transparent 65%);pointer-events:none}
+.dark .container{position:relative;z-index:1}
+.dark h2,.dark h3{color:#fff}
+.dark .eyebrow{color:#7dd3fc}
+.dark .section-header p{color:rgba(255,255,255,.7)}
+.std-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.std{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:30px 26px;transition:all var(--t)}
+.std:hover{background:rgba(255,255,255,.08);transform:translateY(-3px)}
+.std .icon{background:rgba(125,211,252,.12);color:#7dd3fc;margin-bottom:20px}
+.std h3{font-size:18px;margin-bottom:8px}
+.std p{font-size:15px}
+
+/* fulfillment flow */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:56px}
+.list{list-style:none;margin-top:14px}
+.list li{position:relative;padding-left:28px;margin-bottom:10px;font-size:15px}
+.list li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:rgba(36,180,126,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' stroke='%2324b47e' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.flow{display:flex;align-items:stretch;justify-content:center;gap:0;flex-wrap:wrap}
+.flow-node{flex:1;min-width:220px;max-width:320px;background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;text-align:center;box-shadow:var(--shadow-md)}
+.flow-node.main{background:linear-gradient(135deg,var(--primary),var(--primary-light));border:none;color:rgba(255,255,255,.85)}
+.flow-node.main h4{color:#fff}
+.flow-node h4{font-size:17px;margin-bottom:6px}
+.flow-node p{font-size:14px}
+.flow-arrow{display:flex;align-items:center;justify-content:center;width:64px;color:var(--text-light)}
+.flow-arrow svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* timeline */
+.timeline{position:relative;max-width:780px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--primary),var(--accent),var(--border))}
+.tl-item{position:relative;padding-left:64px;margin-bottom:34px}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{position:absolute;left:10px;top:6px;width:20px;height:20px;border-radius:50%;background:#fff;border:4px solid var(--primary);box-shadow:0 0 0 6px rgba(37,99,235,.1)}
+.tl-item.next .tl-dot{border-color:var(--text-light);box-shadow:none}
+.tl-date{font-size:13px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.tl-item.next .tl-date{color:var(--text-light)}
+.tl-item .card{padding:24px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.contact-grid .card{text-align:center}
+.contact-grid .icon{margin:0 auto 18px}
+.contact-grid p{font-size:15px}
+.cta-box{margin-top:56px;background:linear-gradient(135deg,var(--bg-dark),#123a63);border-radius:var(--r-xl);padding:56px;text-align:center;color:rgba(255,255,255,.75);position:relative;overflow:hidden}
+.cta-box::before{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;background:radial-gradient(circle,rgba(6,182,212,.3),transparent 65%)}
+.cta-box *{position:relative}
+.cta-box h3{color:#fff;font-size:30px;margin-bottom:12px;letter-spacing:-.5px}
+.cta-box p{margin-bottom:28px;font-size:17px}
+
+/* footer */
+footer{background:var(--bg-dark);color:rgba(255,255,255,.6);padding:72px 0 32px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:48px}
+footer .logo{color:#fff;margin-bottom:16px}
+footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+footer ul{list-style:none}
+footer li{margin-bottom:10px;font-size:14px}
+footer a{color:rgba(255,255,255,.6)}
+footer a:hover{color:#fff}
+footer p{font-size:14px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1024px){
+  .std-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .nav-links{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md);padding:8px 24px 20px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links li a{display:block;padding:12px 0}
+  .nav-links a.nav-cta{text-align:center;margin-top:8px}
+  .mobile-toggle{display:flex}
+  .pillars,.cat-grid,.contact-grid,.split{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .flow{flex-direction:column;align-items:center}
+  .flow-node{max-width:100%;width:100%}
+  .flow-arrow{transform:rotate(90deg);height:56px}
+  section{padding:80px 0}
+  .cta-box{padding:40px 24px}
+}
+@media (max-width:560px){
+  .std-grid,.footer-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="#top" class="logo"><span class="logo-mark">FW</span>Ecom Global</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#standards">Standards</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <span class="badge"><span class="badge-dot"></span>U.S.-Based Digital Commerce Company</span>
+    <h1>Building and Operating <span class="gradient-text nw">Direct-to-Consumer</span> <span class="nw">E-Commerce</span> Brands</h1>
+    <p class="lead">FW Ecom Global LLC develops a focused portfolio of independent online stores that sell directly to consumers, managing everything from brand creation and marketing to customer support and post-sale care.</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-primary">Learn About Our Model
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 5.6L20 8.4l-4 4 1 5.6L12 15.3 7 18l1-5.6-4-4 5.4-.8z"/></svg></div>
+        <div><strong>Brand-First</strong><span>Every store is built as a real brand, not a one-off listing.</span></div>
+      </div>
+      <div class="pillar reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+        <div><strong>Data-Driven</strong><span>Decisions guided by performance, not guesswork.</span></div>
+      </div>
+      <div class="pillar reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div><strong>Customer-Focused</strong><span>Clear policies and responsive support after every sale.</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <span class="eyebrow">About the Company</span>
+      <h2>A Focused Approach to Digital Commerce</h2>
+      <p><strong>FW Ecom Global LLC</strong> is a digital commerce company organized in the State of Wyoming. We design, launch and operate <strong>independent direct-to-consumer brands</strong> that serve customers across the United States.</p>
+      <p>Rather than chasing volume, we concentrate on a <strong>select group of brands</strong>, giving each one the attention it needs to grow: careful product selection, consistent branding and a reliable shopping experience.</p>
+      <p>Products are sourced and shipped through <strong>trusted fulfillment partners</strong>, while our team handles marketing, sales and customer relationships.</p>
+    </div>
+    <div class="about-cards">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg></div>
+        <div><h3>What We Operate</h3><p>Independent online stores, each with its own identity, product line and audience.</p></div>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></div>
+        <div><h3>How Revenue Works</h3><p>Customers purchase directly on our stores through secure, industry-standard checkout and payment processing.</p></div>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <div><h3>Quality Over Quantity</h3><p>A curated portfolio means more care per brand and a better experience for every customer.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Operational Structure</span>
+      <h2>How the Business Works</h2>
+      <p>A clear, repeatable process for building, launching and managing each brand.</p>
+    </div>
+    <div class="steps">
+      <div class="card step reveal"><div class="step-num">01</div><h3>Market Research</h3><p>We study consumer demand and trends to identify products with real potential.</p></div>
+      <div class="card step reveal"><div class="step-num">02</div><h3>Brand Development</h3><p>Each store receives its own name, visual identity and positioning.</p></div>
+      <div class="card step reveal"><div class="step-num">03</div><h3>Store Launch</h3><p>Stores are built on established e-commerce platforms with secure checkout.</p></div>
+      <div class="card step reveal"><div class="step-num">04</div><h3>Digital Marketing</h3><p>Campaigns on leading advertising platforms, planned and managed in-house.</p></div>
+      <div class="card step reveal"><div class="step-num">05</div><h3>Order Management</h3><p>Orders are processed and tracked through our e-commerce platform.</p></div>
+      <div class="card step reveal"><div class="step-num">06</div><h3>Fulfillment</h3><p>Third-party logistics partners handle warehousing, packing and delivery.</p></div>
+      <div class="card step reveal"><div class="step-num">07</div><h3>Customer Care</h3><p>Our team answers questions and manages returns, exchanges and post-sale support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Industries &amp; Niches</span>
+      <h2>Core Market Categories</h2>
+      <p>Our brands focus on everyday consumer categories with steady demand.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M8 3l-5 4 3 3 2-1v12h8V9l2 1 3-3-5-4a4 4 0 0 1-8 0z"/></svg></div><h3>Fashion &amp; Apparel</h3><p>Clothing and accessories for everyday style.</p></div>
+      <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Health &amp; Wellness</h3><p>Products that support healthier daily routines.</p></div>
+      <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="5.5" cy="10" r="2"/><circle cx="9.5" cy="5.5" r="2"/><circle cx="14.5" cy="5.5" r="2"/><circle cx="18.5" cy="10" r="2"/><path d="M12 12c-3 0-6 4-6 6.5S8 21 12 19.5 18 21 18 18.5 15 12 12 12z"/></svg></div><h3>Pet Supplies</h3><p>Practical items for pets and the people who care for them.</p></div>
+      <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg></div><h3>Home &amp; Living</h3><p>Decor and useful solutions for the home.</p></div>
+      <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div><h3>Lifestyle &amp; Accessories</h3><p>Everyday essentials and thoughtful gifts.</p></div>
+      <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg></div><h3>Sports &amp; Outdoors</h3><p>Gear for active lifestyles and time outside.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARDS (dark) -->
+<section id="standards" class="dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Our Standards</span>
+      <h2>Built on Trust and Consistency</h2>
+      <p>The principles every brand in our portfolio follows, from the first click to after delivery.</p>
+    </div>
+    <div class="std-grid">
+      <div class="std reveal"><div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Secure Checkout</h3><p>Payments handled by established, PCI-compliant processors.</p></div>
+      <div class="std reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></div><h3>Transparent Policies</h3><p>Clear shipping, refund and privacy policies on every store.</p></div>
+      <div class="std reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div><h3>Responsive Support</h3><p>Real people answering customer questions promptly.</p></div>
+      <div class="std reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Reliable Fulfillment</h3><p>Tracked shipping through vetted logistics partners.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FULFILLMENT -->
+<section id="fulfillment" class="section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Fulfillment &amp; Logistics</span>
+      <h2>A Clear Division of Responsibilities</h2>
+      <p>We work with specialized partners so each part of the operation is handled by the right team.</p>
+    </div>
+    <div class="split">
+      <div class="card reveal">
+        <h3>Fulfillment Partners Handle</h3>
+        <ul class="list"><li>Product sourcing and warehousing</li><li>Packing and quality checks</li><li>Shipping and tracking</li></ul>
+      </div>
+      <div class="card reveal">
+        <h3>FW Ecom Global Manages</h3>
+        <ul class="list"><li>Brand development and online stores</li><li>Marketing and advertising</li><li>Sales, customer relationships and support</li></ul>
+      </div>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-node"><h4>Online Stores</h4><p>Independent D2C brands</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div class="flow-node main"><h4>FW Ecom Global</h4><p>Marketing, sales &amp; support</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><h4>Fulfillment Partners</h4><p>Warehousing, packing &amp; shipping</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Our Journey</span>
+      <h2>Where We Are Headed</h2>
+      <p>Key milestones in building FW Ecom Global.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">Foundation</div><div class="card"><h3>E-Commerce Experience</h3><p>Our founder brings hands-on experience in online retail, digital marketing and store operations.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">October 2026</div><div class="card"><h3>FW Ecom Global LLC Established</h3><p>The company is formally organized as a limited liability company in the State of Wyoming.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">2026 – Present</div><div class="card"><h3>Brand Portfolio Launch</h3><p>Our first direct-to-consumer brands go live, built on a structured and repeatable process.</p></div></div>
+      <div class="tl-item next reveal"><div class="tl-dot"></div><div class="tl-date">Next</div><div class="card"><h3>Sustainable Growth</h3><p>Expanding thoughtfully, prioritizing brand quality and customer experience over volume.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Get in Touch</h2>
+      <p>For general inquiries, partnerships or questions about our business, reach out to us.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Principal Office</h3>
+        <p>8200 NW 41st Street, 2nd Floor<br>Doral, FL 33166<br>United States</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div>
+        <h3>Registered Office</h3>
+        <p>30 N Gould St, Ste R<br>Sheridan, WY 82801<br>United States</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <h3>Email</h3>
+        <p><a href="mailto:admin@fwecom.com">admin@fwecom.com</a><br>We usually reply within one business day.</p>
+      </div>
+    </div>
+    <div class="cta-box reveal">
+      <h3>Interested in working with us?</h3>
+      <p>We are open to conversations with suppliers, partners and service providers.</p>
+      <a href="mailto:admin@fwecom.com" class="btn btn-primary">Send Us a Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark">FW</span>Ecom Global</a>
+        <p>A U.S. digital commerce company building and operating direct-to-consumer e-commerce brands.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#about">About</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#categories">Categories</a></li><li><a href="#standards">Standards</a></li></ul>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <ul><li><a href="#fulfillment">Fulfillment</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>8200 NW 41st Street, 2nd Floor<br>Doral, FL 33166, USA</li>
+          <li><a href="mailto:admin@fwecom.com">admin@fwecom.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> FW Ecom Global LLC. All rights reserved.</span>
+      <span>A Wyoming limited liability company.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar=document.getElementById('navbar');
+  const onScroll=()=>navbar.classList.toggle('scrolled',window.scrollY>10);
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  const toggle=document.getElementById('mobileToggle'),links=document.getElementById('navLinks');
+  toggle.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    el.style.transitionDelay=(i%4)*80+'ms';io.observe(el);
+  });
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
